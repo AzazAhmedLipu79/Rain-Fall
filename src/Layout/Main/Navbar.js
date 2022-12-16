@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const Navbar = () => {
     return ( <>
-    <div className="navbar bg-base-100">
+    <div className="navbar bg-base-100 ring-2 ring-slate-700 ring-inset shadow-lg shadow-slate-500/50 rounded-full my-3 px-5 py-2">
   <div className="navbar-start">
     <div className="dropdown">
       <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -19,7 +19,7 @@ const Navbar = () => {
     </ul>
   </div>
   <div className="navbar-end">
-    <a className="btn">Get started</a>
+    <Link  to="/dashboard" className="btn rounded-full bg-slate-600 text-slate-100">Dashboard</Link>
   </div>
 </div>
     </> );

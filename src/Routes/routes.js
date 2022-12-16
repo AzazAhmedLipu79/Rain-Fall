@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
+import Dashboard from "../Layout/Dashboard/Dashboard"; 
 import Main from "../Layout/Main/Main";
-import Home from "../Pages/Main/Home";
+import User from "../Pages/Main/Dashboard/User";
+import UserActivity from "../Pages/Main/Dashboard/UserActivity";
+import Home from "../Pages/Main/Home Segment/Home";
 import Post from "../Pages/Main/Post Segment/Post";
 import Posts from "../Pages/Main/Post Segment/Posts";
 
@@ -28,6 +31,22 @@ const routes = createBrowserRouter([
     //   },
     ],
   },
+  {
+path:"/dashboard",
+element:<Dashboard/>,
+children:[
+  {
+    path: "/dashboard",
+    element:<User/>,
+  }
+  ,
+  {
+    path: "user-activity",
+    element:<UserActivity/>,
+  }
+]
+
+  }
 //   {
 //     path: "/dashboard",
 //     element: <Dashboard />,
